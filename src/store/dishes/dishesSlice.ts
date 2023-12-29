@@ -8,6 +8,7 @@ interface DishState {
   dish: ApiDish | null;
   fetchLoading: boolean;
   deleteLoading: false | string;
+  createLoading: boolean;
 }
 
 const initialState: DishState = {
@@ -15,6 +16,7 @@ const initialState: DishState = {
   dish: null,
   fetchLoading: false,
   deleteLoading: false,
+  createLoading: false,
 };
 
 export const dishesSlice = createSlice({
@@ -42,3 +44,5 @@ export const selectDeleteDishLoading = (state: RootState) =>
   state.dishes.deleteLoading;
 export const selectFetchDishLoading = (state: RootState) =>
   state.dishes.fetchLoading;
+  export const selectCreateLoading = (state: RootState) =>
+  state.dishes.createLoading;

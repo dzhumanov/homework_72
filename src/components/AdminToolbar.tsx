@@ -5,12 +5,12 @@ const AdminToolbar: React.FC = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <div className="container-fluid w-50">
-        <NavLink to="/" className="navbar-brand">
+        <NavLink to="/admin" className="navbar-brand">
           Pizza!
         </NavLink>
         <ul className="navbar-nav mr-auto flex-row gap-2 flex-nowrap">
           <li className="nav-item">
-            <NavLink to="/admin/dishes" className="nav-link">
+            <NavLink to="/admin" className="nav-link">
               Dishes
             </NavLink>
           </li>

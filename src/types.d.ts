@@ -5,6 +5,12 @@ export interface Dish {
   price: number;
 }
 
+export interface DishMutation {
+  name: string;
+  image: string;
+  price: string;
+}
+
 export interface DishesList {
   [id: string]: ApiDish;
 }
