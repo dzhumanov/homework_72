@@ -23,8 +23,8 @@ const cartSlice = createSlice({
         state.cartDishes[index].amount++;
       } else {
         state.cartDishes.push({
-          amount: 1,
-          dish,
+            amount: 1,
+            dish,
         });
       }
     },

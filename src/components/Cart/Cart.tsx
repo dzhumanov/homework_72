@@ -25,8 +25,8 @@ const Cart: React.FC = () => {
   }
 
   const total = cartDishes.reduce((sum, cartDish) => {
-    return sum + cartDish.amount * cartDish.dish.price + DELIVERY;
-  }, 0);
+    return sum + cartDish.amount * cartDish.dish.price;
+  }, DELIVERY);
 
   return (
     <>
