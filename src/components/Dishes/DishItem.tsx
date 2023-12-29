@@ -1,9 +1,7 @@
 import { Dish } from "../../types";
 import React from "react";
 import { Link } from "react-router-dom";
-// import { addDish } from "../../store/cartSlice";
 import ButtonSpinner from "../Spinner/ButtonSpinner";
-import { useAppDispatch } from "../../app/Hooks";
 
 interface Props {
   dish: Dish;
@@ -14,12 +12,11 @@ interface Props {
 const DishItem: React.FC<Props> = ({ dish, onDelete, deleteLoading }) => {
   const imageUrl =
     "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/330px-No-Image-Placeholder.svg.png";
-  const dispatch = useAppDispatch();
   const image = dish.image || imageUrl;
   const imageStyle = {
     background: `url(${image}) no-repeat center center / cover`,
   };
-  
+
   return (
     <div className="card mb-2">
       <div className="row no-gutters">

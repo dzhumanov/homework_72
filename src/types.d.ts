@@ -16,3 +16,8 @@ export interface DishesList {
 }
 
 export type ApiDish = Omit<Dish, "id">;
+
+export interface CartDish {
+  dish: Dish;
+  amount: number;
+}
