@@ -7,7 +7,7 @@ export const fetchDishes = createAsyncThunk<
   Dish[],
   undefined,
   { dispatch: AppDispatch }
->("dishes/fetchAll", async (_, thunkAPI) => {
+>("dishes/fetchAll", async () => {
   const dishesResponse = await axiosApi.get<DishesList | null>("/dishes.json");
   const dishes = dishesResponse.data;
 

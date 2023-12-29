@@ -10,7 +10,7 @@ import {
 } from "../../store/dishes/dishesSlice";
 import { fetchDish, updateDish } from "../../store/dishes/dishesThunks";
 import { useAppDispatch, useAppSelector } from "../../app/Hooks";
-import AdminToolbar from "../../components/AdminToolbar";
+import AdminToolbar from "../../components/Toolbar/AdminToolbar";
 
 const EditDish: React.FC = () => {
   const dispatch = useAppDispatch();

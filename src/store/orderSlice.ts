@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { ApiOrders } from "../types";
 import { RootState } from "../app/store";
-import { fetchOrderData } from "./orderThunks";
+import { deleteOrder, fetchOrderData } from "./orderThunks";
 
 interface OrdersState {
   orders: ApiOrders | null;
@@ -33,8 +33,24 @@ const orderSlice = createSlice({
         state.orderLoading = false;
         state.orderError = true;
       });
+    builder
+      .addCase(deleteOrder.pending, (state) => {
+        state.orderLoading = true;
+        state.orderError = false;
+      })
+      .addCase(deleteOrder.fulfilled, (state) => {
+        state.orderLoading = false;
+        state.orderError = false;
+      })
+      .addCase(deleteOrder.rejected, (state) => {
+        state.orderLoading = false;
+        state.orderError = true;
+      });
   },
 });
+
+export const selectFetchOrderLoading = (state: RootState) =>
+  state.orders.orderLoading;
 
 export const ordersReducers = orderSlice.reducer;
 export const selectOrders = (state: RootState) => state.orders.orders;

@@ -1,13 +1,12 @@
-import React from 'react';
-import {CartDish} from '../../types';
-import CartItem from './CartItem';
+import React from "react";
+import { CartDish } from "../../types";
+import CartItem from "./CartItem";
 
 interface Props {
   cartDishes: CartDish[];
 }
 
-const CartDishes: React.FC<Props> = ({cartDishes}) => {
-
+const CartDishes: React.FC<Props> = ({ cartDishes }) => {
   return (
     <>
       {cartDishes.map((cartDish) => (

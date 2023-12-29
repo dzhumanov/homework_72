@@ -12,9 +12,7 @@ const Cart: React.FC = () => {
 
   const [showModal, setShowModal] = useState(false);
 
-  let cart = (
-    <div className="alert alert-primary">Cart is empty! Add something!</div>
-  );
+  let cart = <div className="alert alert-danger">Cart is empty</div>;
 
   if (cartDishes.length > 0) {
     cart = (
@@ -33,7 +31,7 @@ const Cart: React.FC = () => {
       <h4>Cart</h4>
       {cart}
       <button
-        className="w-100 btn btn-primary"
+        className="w-100 btn btn-danger"
         onClick={() => setShowModal(true)}
       >
         Order

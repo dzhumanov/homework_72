@@ -100,7 +100,7 @@ const Checkout: React.FC = () => {
     <>
       <Toolbar />
       <div className="container w-50">
-        <div className="order-info">
+        <div className="order-info mt-4">
           <h3>Your order:</h3>
           <CartDishes cartDishes={cartDishes} />
           <div className="card mb-2 p-2">

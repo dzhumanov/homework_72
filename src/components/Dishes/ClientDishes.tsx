@@ -19,12 +19,14 @@ const ClientDishes: React.FC = () => {
 
   return (
     <>
-      <h3>All dishes:</h3>
-      {dishesLoading ? (
-        <Spinner />
-      ) : (
-        dishes.map((dish) => <ClientDishItem key={dish.id} dish={dish} />)
-      )}
+      <h3>Pizza:</h3>
+      <div className="pizza-wrapper">
+        {dishesLoading ? (
+          <Spinner />
+        ) : (
+          dishes.map((dish) => <ClientDishItem key={dish.id} dish={dish} />)
+        )}
+      </div>
     </>
   );
 };

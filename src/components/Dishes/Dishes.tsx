@@ -26,19 +26,21 @@ const Dishes: React.FC = () => {
 
   return (
     <>
-      <h4>Dishes</h4>
-      {dishesLoading ? (
-        <Spinner />
-      ) : (
-        dishes.map((dish) => (
-          <DishItem
-            key={dish.id}
-            dish={dish}
-            deleteLoading={deleteLoading}
-            onDelete={() => removeDish(dish.id)}
-          />
-        ))
-      )}
+      <h4>Pizza:</h4>
+      <div className="pizza-wrapper w-75">
+        {dishesLoading ? (
+          <Spinner />
+        ) : (
+          dishes.map((dish) => (
+            <DishItem
+              key={dish.id}
+              dish={dish}
+              deleteLoading={deleteLoading}
+              onDelete={() => removeDish(dish.id)}
+            />
+          ))
+        )}
+      </div>
     </>
   );
 };

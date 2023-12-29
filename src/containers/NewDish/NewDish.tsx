@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { selectCreateLoading } from "../../store/dishes/dishesSlice";
 import { createDish, fetchDishes } from "../../store/dishes/dishesThunks";
 import { useAppDispatch, useAppSelector } from "../../app/Hooks";
-import AdminToolbar from "../../components/AdminToolbar";
+import AdminToolbar from "../../components/Toolbar/AdminToolbar";
 
 const NewDish: React.FC = () => {
   const navigate = useNavigate();

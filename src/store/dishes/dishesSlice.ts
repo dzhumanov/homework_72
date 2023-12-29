@@ -91,10 +91,8 @@ export const dishesReducer = dishesSlice.reducer;
 export const selectDishes = (state: RootState) => state.dishes.dishes;
 export const selectUpdateDishLoading = (state: RootState) =>
   state.dishes.updateLoading;
-
 export const selectFetchOneDishLoading = (state: RootState) =>
   state.dishes.fetchOneLoading;
-
 export const selectOneDish = (state: RootState) => state.dishes.dish;
 export const selectFetchDishLoading = (state: RootState) =>
   state.dishes.fetchLoading;

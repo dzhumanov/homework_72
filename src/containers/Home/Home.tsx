@@ -6,13 +6,13 @@ const Home = () => {
   return (
     <>
       <Toolbar />
-      <div className="container w-50">
+      <div className="container w-75 mt-3">
         <div className="row">
-          <div className="col-6">
-            <ClientDishes/>
+          <div className="col-9">
+            <ClientDishes />
           </div>
-          <div className="col-6">
-            <Cart/>
+          <div className="col-3">
+            <Cart />
           </div>
         </div>
       </div>

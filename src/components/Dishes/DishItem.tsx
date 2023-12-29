@@ -14,33 +14,28 @@ const DishItem: React.FC<Props> = ({ dish, onDelete, deleteLoading }) => {
     "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/330px-No-Image-Placeholder.svg.png";
   const image = dish.image || imageUrl;
   const imageStyle = {
-    background: `url(${image}) no-repeat center center / cover`,
+    backgroundImage: `url(${image})`,
   };
 
   return (
-    <div className="card mb-2">
-      <div className="row no-gutters">
-        <div className="col-sm-4 rounded-start" style={imageStyle} />
-        <div className="col-sm-8">
-          <div className="card-body">
-            <h5 className="card-title">{dish.name}</h5>
-            <p className="card-text">{dish.price} KGS</p>
-            <p className="d-flex gap-2">
-              <button
-                className="btn btn-danger"
-                onClick={onDelete}
-                disabled={deleteLoading ? deleteLoading === dish.id : false}
-              >
-                {deleteLoading && deleteLoading === dish.id && (
-                  <ButtonSpinner />
-                )}
-                Delete
-              </button>
-              <Link to={"/edit-dish/" + dish.id} className="btn btn-primary">
-                Edit
-              </Link>
-            </p>
-          </div>
+    <div className="pizza" style={imageStyle}>
+      <div>
+        <div className="card-body">
+          <h5 className="card-title fs-3 fw-bold">{dish.name}</h5>
+          <p className="card-text">{dish.price} KGS</p>
+          <p className="d-flex gap-2">
+            <button
+              className="btn btn-danger"
+              onClick={onDelete}
+              disabled={deleteLoading ? deleteLoading === dish.id : false}
+            >
+              {deleteLoading && deleteLoading === dish.id && <ButtonSpinner />}
+              Delete
+            </button>
+            <Link to={"/edit-dish/" + dish.id} className="btn btn-primary">
+              Edit
+            </Link>
+          </p>
         </div>
       </div>
     </div>

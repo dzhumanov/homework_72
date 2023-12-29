@@ -3,10 +3,10 @@ import { NavLink } from "react-router-dom";
 
 const AdminToolbar: React.FC = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div className="container-fluid w-50">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-danger">
+      <div className="container-fluid w-75">
         <NavLink to="/admin" className="navbar-brand">
-          Pizza!
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Papa_John%27s_Logo_2019.svg" style={{width: '100px'}} alt="" />
         </NavLink>
         <ul className="navbar-nav mr-auto flex-row gap-2 flex-nowrap">
           <li className="nav-item">
