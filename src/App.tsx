@@ -4,6 +4,7 @@ import Admin from "./containers/Admin/Admin";
 import NewDish from "./containers/NewDish/NewDish";
 import Checkout from "./containers/Checkout/Checkout";
 import Orders from "./containers/Orders/Orders";
+import EditDish from "./containers/EditDish/EditDish";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/new-dish" element={<NewDish />} />
+          <Route path="/edit-dish/:id" element={<EditDish />} />
           <Route path="/checkout" element={<Checkout />}></Route>
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin/orders" element={<Orders />} />

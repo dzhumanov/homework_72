@@ -19,6 +19,11 @@ const AdminToolbar: React.FC = () => {
               Orders
             </NavLink>
           </li>
+          <li className="nav-item">
+            <NavLink to="/" className="nav-link">
+              Return to client's version
+            </NavLink>
+          </li>
         </ul>
       </div>
     </nav>
